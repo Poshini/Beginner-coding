@@ -1,0 +1,35 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int n, i;
+    cin >> n; 
+    int input[n], output[n];
+    for(i = 0; i <n; i++)
+    {
+        cin >> input[i];
+    }
+
+    for(i = 0; i < n; i++)
+    {
+        output[i] = input[n-i-1];
+    }    
+    
+    for(i = 0; i < n; i++)
+    {
+        cout << output[i] << " ";
+    }
+         
+    return 0;
+}
+INPUT
+4
+1 4 3 2
+
+OUTPUT
+2 3 4 1 
