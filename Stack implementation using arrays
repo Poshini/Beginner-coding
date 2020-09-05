@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+
+int stack[100],n=100,top=-1;
+
+void push(int val)
+{
+  if(top>=n-1)
+   cout<<"Stack overflow";
+  else
+  {  
+     top++;
+     stack[top] = val;
+  }
+}
+
+void pop()
+{
+  if(top<=-1)
+    cout<<"Stack underflow";
+  else
+  {
+    cout<<"Popped element is: "<<stack[top]<<endl;
+    top--;
+  }
+}
+
+void display()
+{
+  if(top>=0)
+  {
+    for(int i=top;i>=0;i--)
+      cout<<stack[i]<<endl;
+  }
+  else 
+    cout<<"Stack empty";
+}
+int main() 
+{
+  int ch,val;
+  cout<<"1.Push into stack"<<endl;
+  cout<<"2.Pop from stack"<<endl;
+  cout<<"3.Display"<<endl;
+  cout<<"4.Exit";
+  do
+  {
+    cout<<endl<<"Enter your option: ";
+    cin>>ch;
+    switch(ch)
+    {
+      case 1: cout<<"Enter the element to be pushed: ";
+              cin>>val;
+              push(val);
+              break;
+
+      case 2: pop();
+              break;
+      
+      case 3: display();
+              break;
+      
+      case 4: cout<<"Exit";
+
+      default: cout<<"Invalid choice"<<endl;
+              
+    }
+  }while(ch != 4);
+  return 0;
+}
+
+OUTPUT
+1.Push into stack
+2.Pop from stack
+3.Display
+4.Exit
+Enter your option: 1
+Enter the element to be pushed: 4
+
+Enter your option: 1
+Enter the element to be pushed: 7
+
+Enter your option: 1
+Enter the element to be pushed: 9
+
+Enter your option: 1
+Enter the element to be pushed: 2
+
+Enter your option: 1
+Enter the element to be pushed: 3
+
+Enter your option: 1
+Enter the element to be pushed: 6
+
+Enter your option: 2
+Popped element is: 6
+
+Enter your option: 3
+3
+2
+9
+7
+4
