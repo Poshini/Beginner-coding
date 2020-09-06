@@ -1,0 +1,38 @@
+#include <bits/stdc++.h> 
+#include<iostream>
+using namespace std; 
+  
+char find(string strsent, string strrec) 
+{ 
+    unordered_map<char, int> m; 
+  
+    
+    for (int i = 0; i < strsent.length(); i++) 
+        m[strsent[i]]++; 
+  
+    
+    for (int i = 0; i < strrec.length(); i++) 
+        m[strrec[i]]--; 
+  
+    for (auto j = m.begin(); j != m.end(); j++) 
+    {  
+        if (j->second == 1) 
+            return j->first; 
+    } 
+}
+int main() 
+{ 
+    string strsent;
+    cout<<"Enter first string: ";
+    getline(cin,strsent);
+    cout<<"Enter second string: ";
+    string strrec;
+    getline(cin,strrec); 
+    cout << find(strsent, strrec); 
+    return 0;
+} 
+
+OUTPUT
+Enter the first string: achbek
+Enter the second string: acbek
+h
