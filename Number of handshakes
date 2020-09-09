@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int num;
+  cout<<"Enter the  number of students: ";
+	cin >> num;
+	int total = num * (num-1) / 2;
+	cout <<"Number of handshakes: "<< total;
+	return 0;
+}
+
+OUTPUT
+Enter the number of students: 12
+Number of handshakes is: 66
