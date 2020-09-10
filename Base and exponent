@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+int base, exp;
+cout << "Enter the base value : ";
+cin >> base;
+cout << "Enter the exponent value : ";
+cin >> exp;
+int r = pow(base,exp);
+cout << "Resultant value : "<< r<< endl;
+return 0;
+}
+
+      OUTPUT
+Enter the base value: 
+Enter the exponent value: 6
+Resultant value: 4096
