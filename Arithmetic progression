@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int n,a1,a2;
+  cout<<"Enter the initial values: ";
+	 cin>>a1>>a2;
+   cout<<"Enter the number of terms: ";
+	 cin>>n;
+	 int d=a2-a1;
+	 int term= a1+(n-1)*d;
+	 cout<<term<<"\n";
+	return 0;
+
+}
+
+       OUTPUT
+Enter the initial values: 3 5
+Enter the number of terms: 7
+15
