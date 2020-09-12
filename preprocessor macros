@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define a puts("Happy Coding")
+
+int main()
+{
+    
+    if(a){;}
+    return 0;
+}
+
+   OUTPUT
+ Happy Coding
