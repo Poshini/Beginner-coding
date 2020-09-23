@@ -1,0 +1,26 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+int smallest(int x, int y, int z) 
+{ 
+    int c = 0; 
+    while (x && y && z) 
+    { 
+        x--; 
+        y--; 
+        z--; 
+        c++; 
+    } 
+    return c; 
+} 
+
+int main() 
+{ 
+    int x,y,z;
+    cout<<"Enter the 3 numbers: ";
+    cin>>x>>y>>z; 
+    cout << "Smallest of 3 numbers is: "<< smallest(x, y, z); 
+    return 0; 
+}
+
+Enter the 3 numbers: 1 10 1000
+Smallest of 3 numbers is: 1
