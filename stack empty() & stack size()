@@ -1,0 +1,23 @@
+#include <iostream> 
+#include <stack> 
+using namespace std; 
+  
+int main() 
+{ 
+    stack<int> mystack; 
+    mystack.push(159); 
+    mystack.push(20);
+
+  
+    if (mystack.empty()) 
+    { 
+        cout << "True"; 
+    } 
+    else { 
+        cout << "False"; 
+    } 
+    return 0; 
+} 
+    
+    OUTPUT
+False
