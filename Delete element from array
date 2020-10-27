@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+ 
+        int arr[50], size, i, del, count=0;
+ 
+        cout<<"Enter array size: ";
+        cin>>size;
+        cout<<"\nEnter array elements: \n";
+ 
+        for(i=0; i<size; i++)
+        {
+          cin>>arr[i];
+        }
+ 
+        cout<<"\nEnter element to be delete: ";
+        cin>>del;
+ 
+        for(i=0; i<size; i++)
+        {
+                if(arr[i]==del)
+                {
+                        for(int j=i; j<(size-1); j++)
+                        {
+                                arr[j]=arr[j+1];
+                        }
+                        count++;
+                        break;
+                }
+        }
+        if(count==0)
+        {
+                cout<<"\nElement not found..!!\n";
+        }
+        else
+        {
+                cout<<"\nNow the new array is:\n";
+                for(i=0; i<(size-1); i++)
+                {
+                        cout<<arr[i]<<" ";
+                }
+        }
+    cout<<"\n";
+ 
+        return 0;
+}
+      OUTPUT
+Enter array size: 8
+Enter array elements: 
+34 56 12 09 78 47 28 51
+
+Enter element to be deleted: 09
+Now the new array is:
+34 56 12 78 47 28 51
