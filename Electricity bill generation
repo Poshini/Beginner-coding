@@ -11,7 +11,7 @@ int calculateBill(int units)
     {  
         return (100 * 10) +  
                (units - 100) * 15;  
-    }  
+    }   
     else if (units <= 300) 
     {  
         return (100 * 10) +  
